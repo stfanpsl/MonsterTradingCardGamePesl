@@ -1,0 +1,35 @@
+﻿Designs:
+Das Programm ist in 5 Klassen aufgeteilt, was zunächst wenig erscheinen mag und auch stimmt. Im Nachhinein betrachtet, hätte ich das ganze Projekt besser
+planen und aufspalten sollen. Grund für die geringe Vorbereitung ist mein Zeitmanagement. Wie so oft, konnte ich meinen inneren Schweinehund erst in der
+letzten Minute überwinden, weswegen ich persönlich mit den meisten Lösungen des Programms nur wenig zufrieden bin. Viele Ideen und
+Notlösungen entstanden während des Programmierens und dem Auftreten von Fehlermeldungen, weswegen vieles auch über die Datenbank läuft. Der späte Beginn ist
+auch Grund dafür, dass ich den REST-Server Teil gänzlich auslassen musste. Die mit Abstand größte Klasse ist die Datenbank-Klasse. Ich implementierte Funktionen,
+um mir so gut wie alles mit allem aus der Datenbank zu holen (Bsp: GetIdByUsernameAndPassword, GetUsernameByID, GetPasswortByID etc.). 
+Ein großer Dorn im Auge ist, dass mein Programm in vielen Teilen nicht dynamisch ist. Das bedeutet, dass ich aufgrund des Testens und Ausprobierens viel mit
+Arrays gearbeitet habe und erst später in der Entwicklung auf die äußerst praktische List<> zurückgegriffen habe.
+Besonders stolz bin ich auf die Auflistung des Scoreboards. Ich nehme an, dass viele StudentInnen ein Array/eine Liste erst sortieren müssen, bevor das Board 
+geprintet werden kann.
+In meiner Lösung hole ich mir direkt mit einem SQL Statement eine geordnete Liste und printe sie auf der Konsole, was im Grunde ein 1-Zeiler war.
+
+Failures:
+Am Anfang des Projektes lag mein Schwerpunkt auf der Datenbankanbindung, da ich bereits zu dem Zeitpunkt wusste, dass das Projekt sonst nicht rechtzeitig
+fertig wird. Ich habe mehr Zeit dafür gebraucht herauszufinden, dass ich außerhalb von VS2019 eine DB brauche um mein Programm damit zu verbinden,
+als mir lieb ist. Nachdem das geschafft war, lief die restliche Session wie geschmiert. Am Folgetag, als es um die Battlelogic ging, bekam ich unzählige Male
+die Fehlermeldung, dass bereits zu viele Connections mit der Datenbank existieren. Das war der Punkt an dem ich anfing, alle Daten in Objekten zu speichern,
+um nur mit diesen zu arbeiten. So hätte es vermutlich von Anfang an sein sollen, allerdings gelang mir der Austausch von DB-orientiert zu Objekt-orientiert
+in vielen Bereichen. Somit ist es möglich, sich zu registrieren, einzuloggen, ein BattleDeck zu erstellen, Karten zu kaufen (insofern man genug Coins hat),
+einen Kampf gegen den Computer zu führen, das Score Board einzusehen, seine Profile-Page zu sehen und seine Karten zu tauschen.
+
+
+Unit Tests:
+
+Hier werden alle möglichen Angriffssituationen getestet. Besonders zu beachten sind hier die specialities.
+
+Time Spent:
+
+Session 1: 4h
+Session 2: 11h
+Session 3: 6h
+Session 4: 13h
+---------------
+Projekt: ~34h
